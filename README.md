@@ -1,6 +1,6 @@
 # Vehicle Information Repository
 
-Welcome to the Vehicle Information Repository! This repository contains a structured JSON file with detailed information about various vehicles, categorized by type, brand, and model.
+This repository contains a structured JSON file with detailed information about various vehicles, categorized by type, brand, and model.
 
 ## Table of Contents
 - [Introduction](#introduction)
