@@ -31,7 +31,22 @@ $jsonFilePath = 'vehicles.json';
 $vehicleData = json_decode(file_get_contents($jsonFilePath), true);
 ?>
 ```
+## Using with json iterator
+Since the json file is large, you can use the json iterator, which is a more performant approach; this especially prevents the max allowed memory error.
 
+[The library](https://github.com/halaxa/json-machine)
+```php
+use JsonMachine\JsonMachine;
+
+$jsonFilePath = 'vehicles.json';
+$jsonMachine = JsonMachine::fromFile($jsonFilePath);
+foreach ($jsonMachine as $key => $vehicle) {
+   echo $vehicle->category;
+   echo $vehicle->brand;
+   echo $vehicle->model;
+}
+
+```
 # Contribution
 
 If you find missing or inaccurate information, contributions are welcome! Fork the repository, make your changes, and submit a pull request. Please follow the existing structure to maintain consistency.
